@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "node dist/app.js",
-    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "dev": "ts-node src/app.ts",
     "build": "tsc",
     "clean": "rm -rf dist",
     "seed:applications": "ts-node src/seeders/application.seeder.ts"

@@ -27,6 +27,8 @@ for (let routeConfig of APP_ROUTES) {
     app.use(routeConfig.prefix, routeConfig.route)
 }
 
+app.get("/", (req: any, res: any) => res.send("Express on Vercel"));
+
 app.get("/api/", (req: Request, res: Response) => {
   res.send("UniTab Application");
 });
@@ -41,3 +43,5 @@ const io = new Server(server, {
     },
 });
 setupSocket(io);
+
+export default app
